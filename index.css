@@ -1,0 +1,9 @@
+.hero{
+    min-height:70vh;
+    background:url('./src/assets/lines-pattern-1-1.svg');
+    background-size: cover;
+}
+
+.bg-cus:hover{
+    background-image: url('src/assets/pexels-pixabay-301664.jpg')
+}

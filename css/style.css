@@ -1,0 +1,71 @@
+.hero {
+  min-height: 70vh;
+  background: url("./src/assets/lines-pattern-1-1.svg");
+  background-size: cover;
+}
+
+.card {
+  border: none !important;
+}
+
+:root {
+  --initial:#403D40;
+  --light-1:#D6CBD6;
+  --light-2:#E3D8E3;
+  --light-3:#FFF2FF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*animation rotate*/
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.line:hover {
+  position: relative;
+  z-index: 0;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2em;
+}
+.line:hover::before {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: var(--initial);
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(var(--initial), var(--light-1)), linear-gradient(var(--initial), var(--light-1)), linear-gradient(var(--light-1), var(--light-2)), linear-gradient(var(--light-3), var(--light-1));
+  animation: rotate 4s linear infinite;
+}
+.line:hover::after {
+  position: absolute;
+  content: ""; /*important to make appear the line animation*/
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+  animation: opacityChange 2s infinite alternate;
+}
+
+@keyframes opacityChange {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

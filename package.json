@@ -1,0 +1,22 @@
+{
+  "name": "web-dev-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio of javascript projects",
+  "main": "app.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/style.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blusheddeny/web-dev-portfolio.git"
+  },
+  "author": "Ingrid Valdez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blusheddeny/web-dev-portfolio/issues"
+  },
+  "homepage": "https://github.com/blusheddeny/web-dev-portfolio#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}

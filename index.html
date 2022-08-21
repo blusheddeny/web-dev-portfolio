@@ -7,7 +7,7 @@
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!--custom css-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!--material icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -61,8 +61,8 @@
           <div class="container p-5">
             <div class="row p-4 justify-content-center" id="box">
                 <h2 class="text-center">Portfolio</h2>
-                <input type="button" id="add" value="+">
-                    <div class="card col-md-4 m-3 bg-cus" id="card-1">
+
+                    <div class="card line col-md-4 m-3 bg-cus" id="card-1">
                         <div class="card-body">
                           <h5 class="card-title">Drink Finder</h5>
                           <h6 class="card-subtitle mb-2 text-muted">API consuming app</h6>
@@ -71,14 +71,23 @@
                         </div>
                     </div>
                     
-                    <div class="card col-md-4 m-3 bg-cus" id="card-2">
+                    <div class="card  line col-md-4 m-3 bg-cus" id="card-2">
                         <div class="card-body">
                           <h5 class="card-title">Scold yourself</h5>
                           <h6 class="card-subtitle mb-2 text-muted">Interactive short game</h6>
                           <p class="card-text">Project in 100devs agency for javascript, css and html skills.</p>
-                          <a href="https://blusheddeny.github.io/youHaveMessedUp/" class="card-link">See more</a>
+                          <a href="https://blusheddeny.github.io/youHaveMessedUp/main.html" class="card-link">See more</a>
                         </div>
                     </div>
+                    <div class="card line col-md-4 m-3 bg-cus" id="card-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Calc in javascript</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Object oriented programming</h6>
+                          <p class="card-text">Project in 100devs agency making use of object oriented paradigm</p>
+                          <a href="https://blusheddeny.github.io/100devs-calculator/" class="card-link">See more</a>
+                        </div>
+                    </div>
+
                 
             </div>
           
@@ -86,6 +95,7 @@
           
             
         </section>
+        
         <!--footer-->
         <footer class="row p-3 bg-dark text-white">
             <div class="col-md-6 justify-content-between">
@@ -117,7 +127,7 @@
 
                 </div>
                 <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti?</p>
+                    <p> My mission is to do nothing but good things, learn something new every day and overdeliver.</p>
                 </div>
 
             </div>
@@ -125,30 +135,7 @@
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script>
-        //create cards
-        const btn = document.getElementById('add').addEventListener('click', addNewCard)
-var id = 2
-
-function addNewCard(){
-  console.log('hello')
-  var box = document.getElementById('box')
-  //add another card to page
-  //get card
-  var elem = document.querySelector('#card-1')
-  //clone card
-  var clone = elem.cloneNode(true)
-  //assign id to new elem 
-    
-   clone.id = 'card'+'-'+ id++
-
-  //add different id to new element
   
-  //put into the document
-  elem.after(clone)
-}
-
-    </script>
  
 </body>
 </html>

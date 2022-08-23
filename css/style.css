@@ -1,0 +1,78 @@
+body {
+  background: url("/src/assets/pexels-gdtography-911738.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero {
+  min-height: 70vh;
+}
+
+.card {
+  border: none !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*animation rotate*/
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.line {
+  position: relative;
+  z-index: 0;
+  width: auto;
+  height: auto;
+  border-radius: 10px !important;
+  overflow: hidden;
+  padding: 2em !important;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+}
+
+.line:hover::before {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  left: -50% !important;
+  top: -50% !important;
+  width: 200%;
+  height: 200%;
+  background-color: var(--initial);
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#FFF2FF, #E3D8E3), linear-gradient(#E3D8E3, #D6CBD6), linear-gradient(#D6CBD6, #FFF2FF), linear-gradient(#403D40, #FFF2FF);
+  animation: rotate 4s linear infinite;
+  transition: transform 0.15s ease-out;
+}
+
+.line:hover::after {
+  position: absolute;
+  content: ""; /*important to make appear the line animation*/
+  z-index: -1;
+  left: 6px !important;
+  top: 6px !important;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px !important;
+  animation: opacityChange 2s infinite alternate;
+  transition: all 0.2s ease-out;
+}
+
+@keyframes opacityChange {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

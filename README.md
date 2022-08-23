@@ -5,7 +5,7 @@ Contains 3 sections:
 - Hero banner
 - Project section
 - Footer with contact details
-#Technologies used
+## Technologies used
 -CSS
 -NPM
 -SASS

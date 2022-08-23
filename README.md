@@ -6,8 +6,8 @@ Contains 3 sections:
 - Project section
 - Footer with contact details
 ## Technologies used
--CSS
--NPM
--SASS
--HTML
--GIT
+- CSS
+- NPM
+- SASS
+- HTML
+- GIT
